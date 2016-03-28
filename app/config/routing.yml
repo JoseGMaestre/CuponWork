@@ -1,0 +1,27 @@
+oferta:
+    resource: "@OfertaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+usuario:
+    resource: "@UsuarioBundle/Resources/config/routing.yml"
+    prefix:   /
+
+tienda:
+    resource: "@TiendaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ciudad:
+    resource: "@CiudadBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+pagina_ayuda:
+    path: /ayuda
+    defaults: { _controller: OfertaBundle1:Default:ayuda }
+
+pagina_estatica:
+    path: /sitio/{pagina}
+    defaults: { _controller: OfertaBundle:Sitio:estatica }
