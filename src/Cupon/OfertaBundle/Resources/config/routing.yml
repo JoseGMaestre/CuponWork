@@ -1,3 +1,5 @@
-oferta_homepage:
-    path:     /
-    defaults: { _controller: OfertaBundle:Default:index }
+#oferta:
+#    path:     /
+#    ##defaults: { _controller: OfertaBundle:Default:index }
+#    ##pattern:  /{ciudad}/ofertas/{slug}
+#    defaults: { _controller: OfertaBundle:Default:oferta }
