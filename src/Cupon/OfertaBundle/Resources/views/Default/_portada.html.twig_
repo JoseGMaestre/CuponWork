@@ -1,0 +1,6 @@
+{# src/Cupon/OfertaBundle/Resources/views/portada.html.twig #}
+{% extends '::frontend.html.twig' %}
+{% block title %} ... {% endblock %}
+{% block id 'portada' %}
+{% block article %} ... {% endblock %}
+{% block aside %} ... {% endblock %}

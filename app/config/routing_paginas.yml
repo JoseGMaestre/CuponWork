@@ -1,10 +1,12 @@
-# app/config/routing_paginas.yml
-pagina_ayuda:
-    path: /ayuda
-    defaults: { template: 'OfertaBundle:Default:ayuda.html.twig' }
-pagina_privacidad:
-    path: /privacidad
-    defaults: { template: 'OfertaBundle:Default:privacidad.html.twig' }
-pagina_condiciones:
-    path: /terminos-y-condiciones
-    defaults: { template: 'OfertaBundle:Default:condiciones.html.twig' }
+# Rutas de las páginas estáticas del sitio
+ayuda:
+    pattern:  /ayuda
+    defaults: { template: 'OfertaBundle:Sitio:ayuda.html.twig' }
+
+privacidad:
+    pattern:  /privacidad
+    defaults: { template: 'OfertaBundle:Sitio:privacidad.html.twig' }
+
+sobre_nosotros:
+    pattern:  /sobre-nosotros
+    defaults: { template: 'OfertaBundle:Sitio:sobre-nosotros.html.twig' }

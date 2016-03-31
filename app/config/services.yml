@@ -1,9 +1,17 @@
-# Learn more about services, parameters and containers at
-# http://symfony.com/doc/current/book/service_container.html
-parameters:
-#    parameter_name: value
-
+# Configuración global de los servicios de la aplicación
+# Este archivo se importa desde app/config/config.yml
 services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    twig.extension.text:
+        class: Twig_Extensions_Extension_Text
+        tags:
+            - { name: twig.extension }
+
+    twig.extension.debug:
+        class: Twig_Extension_Debug
+        tags:
+           - { name: twig.extension }            
+
+    twig.extension.cupon:
+        class: Cupon\OfertaBundle\Twig\Extension\CuponExtension
+        tags:
+            - { name: twig.extension }

@@ -1,0 +1,3 @@
+# app/config/config_integracion.yml
+imports:
+- { resource: config.yml }

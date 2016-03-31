@@ -3,8 +3,14 @@ oferta:
     prefix:   /
 
 portada:
-   path:     /
-   defaults: { _controller: OfertaBundle:Default:portada }
+   path:     /{ciudad}
+   defaults: { _controller: OfertaBundle:Default:portada, ciudad: null }
+
+# Ruta simple de la portada
+_portada:
+    path: /
+    defaults: { _controller: FrameworkBundle:Redirect:redirect,route: portada, ciudad: '%cupon.ciudad_por_defecto%' }
+
 
 #usuario:
 #    resource: "@UsuarioBundle/Resources/config/routing.yml"
@@ -14,9 +20,9 @@ portada:
 #    resource: "@TiendaBundle/Resources/config/routing.yml"
 #    prefix:   /
 
-#ciudad:
-#    resource: "@CiudadBundle/Resources/config/routing.yml"
-#    prefix:   /
+ciudad:
+    resource: "@CiudadBundle/Resources/config/routing.yml"
+    prefix:   /
 
 app:
     resource: "@AppBundle/Controller/"
@@ -34,3 +40,16 @@ _pagina_estatica:
     path: /sitio/{pagina}/
     defaults: { _controller: OfertaBundle:Sitio:estatica }
 
+#oferta:
+#    path: /{ciudad}/ofertas/{slug}
+#    defaults: { _controller: OfertaBundle:Default:oferta }
+
+# Rutas importadas del bundle OfertaBundle
+OfertaBundle:
+    resource: "@OfertaBundle/Resources/config/routing.yml"
+    prefix:   /{_locale}
+    requirements:
+        _locale: en|es
+    defaults:
+        _locale: es
+        
