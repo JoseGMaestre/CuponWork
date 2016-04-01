@@ -27,7 +27,7 @@ rel="stylesheet" type="text/css" />
 				<a href="{{ path('portada') }}">Oferta del día</a>
 			</li>
 			<li>
-				<a href="#">Ofertas recientes</a>
+				<a href="{{ path('oferta', { 'slug': oferta.slug, 'ciudad': oferta.ciudad.slug }) }}">Ofertas recientes</a>
 			</li>
 			<li>
 				<a href="#">Mis ofertas</a>
